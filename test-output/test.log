@@ -1,0 +1,91 @@
+
+
+Testing API_URL: [http://localhost:3000/api]
+Purging data... Done!
+
+  Article
+    Create
+      ✓ should create article (125ms)
+      ✓ should create article with tags (95ms)
+      ✓ should disallow unauthenticated user
+      ✓ should enforce required fields (231ms)
+    Get
+      ✓ should get article by slug (41ms)
+      ✓ should get article with tags by slug
+      ✓ should disallow unknown slug (41ms)
+    Update
+      ✓ should update article (768ms)
+      ✓ should disallow missing mutation
+      ✓ should disallow empty mutation
+      ✓ should disallow unauthenticated update
+      ✓ should disallow updating non-existent article (41ms)
+      ✓ should disallow non-author from updating (47ms)
+    Favorite
+      ✓ should favorite article (149ms)
+      ✓ should disallow favoriting by unauthenticated user
+      ✓ should disallow favoriting unknown article (58ms)
+      ✓ should unfavorite article (77ms)
+    Delete
+      ✓ should delete article (379ms)
+      ✓ should disallow deleting by unauthenticated user
+      ✓ should disallow deleting unknown article (166ms)
+      ✓ should disallow deleting article by non-author (120ms)
+    List
+      ✓ should list articles (293ms)
+      ✓ should list articles with tag (411ms)
+      ✓ should list articles by author (207ms)
+      ✓ should list articles favorited by user (39ms)
+      ✓ should list articles by limit/offset (126ms)
+      ✓ should list articles when authenticated (183ms)
+      ✓ should disallow multiple of author/tag/favorited
+    Feed
+      ✓ should get feed (590ms)
+      ✓ should disallow unauthenticated feed
+    Tags
+      ✓ should get tags
+
+  Comment
+    Create
+      ✓ should create comment (417ms)
+      ✓ should disallow unauthenticated user
+      ✓ should enforce comment body
+      ✓ should disallow non-existent article
+    Get
+      ✓ should get all comments for article (109ms)
+    Delete
+      ✓ should delete comment (38ms)
+      ✓ only comment author should be able to delete comment
+      ✓ should disallow unauthenticated user
+      ✓ should disallow deleting unknown comment (43ms)
+
+  User
+    Create
+      ✓ should create user (40ms)
+      ✓ should disallow same username
+      ✓ should disallow same email
+      ✓ should enforce required fields
+    Login
+      ✓ should login
+      ✓ should disallow unknown email
+      ✓ should disallow wrong password
+      ✓ should enforce required fields
+    Get
+      ✓ should get current user
+      ✓ should disallow bad tokens (58ms)
+    Profile
+      ✓ should get profile
+      ✓ should disallow unknown username
+      ✓ should follow/unfollow user (419ms)
+      ✓ should disallow following with bad token
+    Update
+      ✓ should update user (122ms)
+      ✓ should disallow missing token/email in update
+      ✓ should disallow reusing email (268ms)
+
+  Util
+    Ping
+      ✓ should ping
+
+
+  58 passing (9s)
+
